@@ -27,9 +27,7 @@ pipeline {
                             sed -i "s|image: .*|image: ${newImage}|" K8S/deployment.yaml
 
 
-                             git pull origin main
-
-                            # Configure Git remote to use credentials for pushing
+                            git pull origin main
                             git remote set-url origin $GITHUB_TOKEN@github.com:AhmedGaberElbltagy/Tetris-App-Manifest-files.git
                             git add K8S/deployment.yaml
                             git commit -m 'Update deployment image to version ${env.BUILD_NUMBER} '
