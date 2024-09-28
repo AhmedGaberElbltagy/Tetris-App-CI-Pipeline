@@ -1,5 +1,3 @@
-@Library('Jenkins-Shared_library')
-def gv
 pipeline {
     agent any
     environment{
