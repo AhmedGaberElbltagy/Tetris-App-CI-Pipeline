@@ -4,7 +4,7 @@ pipeline {
        
     }
     tools{
-        gradle
+        gradle '8.10'
     }
     stages {
     //     stage('Cleanup Workspace') {
