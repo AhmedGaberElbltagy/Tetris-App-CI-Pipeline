@@ -4,7 +4,7 @@ pipeline {
        
     }
     tools{
-        gradle '8.10'
+        gradle '8.10.2'
     }
     stages {
         stage('Update Deployment File') {
