@@ -20,7 +20,7 @@ pipeline {
                         git config user.email "ahmedelbltagy1999@gmail.com" 
                         git config user.name "AhmedGaberElbltagy"     
                          ls -l      
-                        sed -n '/image/p' deployment.yaml
+                        sed -n '/image/p' K8S/deployment.yaml
 
                         
                     '''
