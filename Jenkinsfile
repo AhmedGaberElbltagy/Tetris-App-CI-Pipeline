@@ -11,7 +11,9 @@ pipeline {
                 GIT_USER_NAME = "AhmedGaberElbltagy"   
             }
             steps {
+
                     def newImage = "my-spring-boot-app:${env.BUILD_NUMBER}"
+                    sh 'echo ${env.BUILD_NUMBER}'
                     withCredentials([usernamePassword(credentialsId: 'github', usernameVariable: 'GITHUB_USER', passwordVariable: 'GITHUB_TOKEN')]) {
                     
                     git branch: 'main', url: 'https://github.com/AhmedGaberElbltagy/Tetris-App-Manifest-files.git'
