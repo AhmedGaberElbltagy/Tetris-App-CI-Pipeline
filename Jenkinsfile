@@ -21,11 +21,6 @@ pipeline {
 
                         
                     '''
-                    withCredentials([usernamePassword(credentialsId: 'github', usernameVariable: 'GITHUB_USER', passwordVariable: 'GITHUB_TOKEN')]) {
-                     // Your commands here
-                    sh 'echo $GITHUB_USER'
-                    sh 'echo $GITHUB_TOKEN'
-}
 
                 }
 
