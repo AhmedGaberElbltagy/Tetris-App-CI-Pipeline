@@ -16,7 +16,8 @@ pipeline {
                         echo $GITHUB_USER' 
                         echo $GITHUB_TOKEN' 
                         git config user.email "ahmedelbltagy1999@gmail.com" 
-                        git config user.name "AhmedGaberElbltagy"           
+                        git config user.name "AhmedGaberElbltagy"     
+                         ls -l      
                         sed -n '/image/p' deployment.yaml
 
                         
