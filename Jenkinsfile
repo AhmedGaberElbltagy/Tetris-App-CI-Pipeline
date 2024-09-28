@@ -11,7 +11,8 @@ pipeline {
                 GIT_USER_NAME = "AhmedGaberElbltagy"   
             }
             steps {
-
+                script {
+                    
                     def newImage = "my-spring-boot-app:${env.BUILD_NUMBER}"
                     sh 'echo ${env.BUILD_NUMBER}'
                     withCredentials([usernamePassword(credentialsId: 'github', usernameVariable: 'GITHUB_USER', passwordVariable: 'GITHUB_TOKEN')]) {
@@ -28,12 +29,9 @@ pipeline {
 
                         
                     '''
-
                 }
 
-                        // git add java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
-                        // git commit -m "Update deployment image to version ${BUILD_NUMBER}"
-                        // git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
+                }
             }
         }
     }
