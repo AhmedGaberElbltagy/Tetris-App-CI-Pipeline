@@ -12,6 +12,8 @@ pipeline {
             }
             steps {
                     withCredentials([usernamePassword(credentialsId: 'github', usernameVariable: 'GITHUB_USER', passwordVariable: 'GITHUB_TOKEN')]) {
+                    
+                    git branch: 'main', url: 'https://github.com/AhmedGaberElbltagy/Tetris-App-Manifest-files.git'
                     sh '''
                         echo $GITHUB_USER' 
                         echo $GITHUB_TOKEN' 
