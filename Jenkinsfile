@@ -15,7 +15,7 @@ pipeline {
                     def newImage = "ahmedelbltagy/my-spring-boot-app:${env.BUILD_NUMBER}"
                     sh "echo ${env.BUILD_NUMBER}"
                     
-                    withCredentials([usernamePassword(credentialsId: 'github', usernameVariable: 'GITHUB_USER', passwordVariable: 'GITHUB_TOKEN')]) {
+                    withCredentials([usernamePassword(credentialsId: 'jenkins_ssh2', usernameVariable: 'GITHUB_USER', passwordVariable: 'GITHUB_TOKEN')]) {
                         git branch: 'main', url: "https://github.com/${GIT_USER_NAME}/${GIT_REPO_NAME}.git"
                         sh """
                             echo $GITHUB_USER
